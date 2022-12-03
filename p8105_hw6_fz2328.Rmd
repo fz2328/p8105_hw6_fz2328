@@ -136,9 +136,10 @@ bwt_ppwt_linear = lm(bwt ~ ppwt, data = birthweight)
 Let's look at the plot of model residuals against fitted values. 
 ```{r}
 birthweight %>% 
-  add_predictions(bwt_ppwt_linear) %>% 
-  ggplot(aes(x = ppwt, y = bwt)) + geom_point() + 
-  geom_line(aes(y = pred), color = "red")
+  add_predictions(bwt_ppwt_linear) %>%
+  add_residuals(bwt_ppwt_linear) %>% 
+  ggplot(aes(x = pred, y = resid)) + 
+  geom_point()
 ```
 
 Now, let's compare the self-constructed model to another 2 models.   

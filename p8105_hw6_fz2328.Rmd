@@ -2,7 +2,7 @@
 title: "p8105_hw6_fz2328"
 author: "Fengdi Zhang"
 date: "2022-12-02"
-output: github_document
+output: git_document
 ---
 
 ```{r setup, include=FALSE}
